@@ -109,6 +109,7 @@ def game_loop():
             foody = round(random.randrange(0, dis_height - snake_block) / 10.0) * 10.0
             length_of_snake += 1
             score += 1
+            print('score:',score)
 
         pygame.draw.rect(dis, white, [0, 0, 100, 40])
         score_font = pygame.font.SysFont("comicsansms", 35)
