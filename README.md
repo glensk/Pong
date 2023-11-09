@@ -1,18 +1,22 @@
 # Pong
-Pong in python for singleplayer or muyltiplayer.
+Pong in python for singleplayer or muyltiplayer. 
+Uses keys 
+    - "w" and "s" for left player
+    - "up-arrow" and "down-arrow" for right player
+
 
 ## Install
 
 ```shell
-~$ git clone https://github.com/glensk/Pong
-~$ cd Pong
-~$ pip install tkinter
+git clone https://github.com/glensk/Pong
+cd Pong
+pip install tkinter
 ```
 
 ## Run
 
 ```shell
-~$ python3.11 pong.py
+python3.11 pong.py
 ```
 
 ## Credits
