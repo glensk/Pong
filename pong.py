@@ -23,9 +23,12 @@ message.penup()
 message.hideturtle()
 message.write("Pick a Mode!", False, align='center',
               font=('Arial', 15, 'normal'))
+
 answers = {"Singleplayer": 1, "Multiplayer": 2}
+#answer = wn.textinput(
+#    "pick a mode: ", "Type one of the following: ".join(answers))
 answer = wn.textinput(
-    "pick a mode: ", "Type one of the following: ".join(answers))
+    "pick a mode: ", "Choose: 1 for singleplayer OR 2 for multiplayer")
 
 print("answer:",answer)
 version = ""
