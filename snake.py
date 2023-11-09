@@ -1,6 +1,7 @@
 import pygame
 import time
 import random
+import pygame.gfxdraw as gfxdraw
 
 pygame.init()
 
@@ -10,6 +11,7 @@ white = (255, 255, 255)
 red = (213, 50, 80)
 green = (0, 255, 0)
 blue = (50, 153, 213)
+violet=(127,0,255)
 
 # Set display dimensions
 dis_width = 600
@@ -21,7 +23,7 @@ pygame.display.set_caption('Snake Game')
 clock = pygame.time.Clock()
 
 snake_block = 10
-snake_speed = 10
+snake_speed = 2
 
 font_style = pygame.font.SysFont(None, 30)
 
@@ -87,7 +89,13 @@ def game_loop():
         x1 += x1_change
         y1 += y1_change
         dis.fill(blue)
-        pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
+        # pygame.draw.rect(dis, black, [foodx, foody, snake_block, snake_block])
+        
+        # print("dis:",dis)
+        # print('foodx:',foodx)
+        # print('foody:',foody)
+        # print('snake_block:',snake_block )
+        gfxdraw.pie(dis, int(foodx), int(foody), snake_block, 0, 90, black) 
         snake_head = []
         snake_head.append(x1)
         snake_head.append(y1)
@@ -100,7 +108,7 @@ def game_loop():
                 game_close = True
 
         for i in snake_list:
-            pygame.draw.rect(dis, black, [i[0], i[1], snake_block, snake_block])
+            pygame.draw.rect(dis, violet, [i[0], i[1], snake_block, snake_block])
 
         pygame.display.update()
 
@@ -117,7 +125,7 @@ def game_loop():
         # print('score:',score)
         dis.blit(value, [0, 0])
 
-        clock.tick(snake_speed+score)
+        clock.tick(snake_speed)
 
     pygame.quit()
     quit()
