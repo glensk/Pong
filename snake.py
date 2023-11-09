@@ -4,24 +4,26 @@ import random
 
 pygame.init()
 
-# Define colors
-black = (0, 0, 0)
+# Define color, 255, 255)
 white = (255, 255, 255)
-red = (213, 50, 80)
+red = (250, 50, 80)
 green = (0, 255, 0)
 blue = (50, 153, 213)
 
-# Set display dimensions
+black = (0,0,0)
+purple = (100,10,254)
+orange = (255,165,0)
+pink = (255,255,254)# Set display dimensions
 dis_width = 600
 dis_height = 400
 
 dis = pygame.display.set_mode((dis_width, dis_height))
-pygame.display.set_caption('Snake Game')
+pygame.display.set_caption("le super jeu du serpent")
 
 clock = pygame.time.Clock()
 
 snake_block = 10
-snake_speed = 10
+snake_speed = 9
 
 font_style = pygame.font.SysFont(None, 30)
 
@@ -29,6 +31,10 @@ font_style = pygame.font.SysFont(None, 30)
 def message(msg, color):
     mesg = font_style.render(msg, True, color)
     dis.blit(mesg, [dis_width / 6, dis_height / 3])
+    
+def message2(msg, color):
+    mesg = font_style.render(msg, True, color)
+    dis.blit(mesg, [dis_width / 12, dis_height / 6])
 
 
 def game_loop():
@@ -52,8 +58,9 @@ def game_loop():
     while not game_over:
 
         while game_close:
-            dis.fill(blue)
-            message("You lost! Press Q-Quit or C-Play Again", red)
+            dis.fill(purple)
+            message(" Vous avez perdu au super jeu de serpent", black)
+            message2("votre score :"+str(score),orange)
             pygame.display.update()
 
             for event in pygame.event.get():
@@ -86,7 +93,7 @@ def game_loop():
 
         x1 += x1_change
         y1 += y1_change
-        dis.fill(blue)
+        dis.fill(purple)
         pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
         snake_head = []
         snake_head.append(x1)
@@ -107,8 +114,8 @@ def game_loop():
         if x1 == foodx and y1 == foody:
             foodx = round(random.randrange(0, dis_width - snake_block) / 10.0) * 10.0
             foody = round(random.randrange(0, dis_height - snake_block) / 10.0) * 10.0
-            length_of_snake += 1
-            score += 1
+            length_of_snake += 7
+            score += 10
             print('score:',score)
 
         pygame.draw.rect(dis, white, [0, 0, 100, 40])
