@@ -1,8 +1,9 @@
 # Pong
 Pong in python for singleplayer or muyltiplayer. 
-Uses keys 
-    - "w" and "s" for left player
-    - "up-arrow" and "down-arrow" for right player
+- Upon start, type singleplayer or multiplayer.
+- Uses keys "w" and "s" for left player. 
+- Use keys "up-arrow" and "down-arrow" for right player.
+
 
 
 ## Install
