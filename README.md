@@ -6,12 +6,14 @@ Pong in python for singleplayer or muyltiplayer.
 
 
 
-## Install
+## Clone this repository
 
 ```shell
 git clone https://github.com/glensk/Pong
 cd Pong
 ```
+
+## Install python ``tkinter`` library
 
 Now, we need to install the ``tkinter`` library for your specific version of
 python. To find your version of python, type:
@@ -41,7 +43,7 @@ sudo yum install python3-tkinter
 sudo pacman -S tk
 ```
 
-## Run
+## Run Pong
 
 ```shell
 python3.11 pong.py
