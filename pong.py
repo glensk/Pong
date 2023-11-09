@@ -32,9 +32,14 @@ version = ""
 if(answer in [ "Singleplayer", "singleplayer", "1"]):
     version = "singleplayer"
     print("Entering singleplayer... AI Bot getting ready for first round...")
-else:
+elif (answer in [ "Multiplayer", "multiplayer", "2"]):
     version = "multiplayer"
     print("Entering multiplayer")
+else:
+    print("Please type \"singleplayer\" or \"1\" or \"multiplayer\" or \"2\"". Starting multiplayer version for now.)
+    version = "multiplayer"
+    print("Entering multiplayer")
+
 message.clear()
 
 #Pen
