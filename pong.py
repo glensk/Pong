@@ -7,6 +7,15 @@
 import turtle  # very basic gui design module
 import time
 import os
+import platform
+
+whatsys = platform.system()
+use="afplay"
+print('whatsys',whatsys)
+if whatsys == 'Linux':
+    use = "play"
+if whatsys == 'Windows':
+    use = "play"
 
 #Window
 wn = turtle.Screen()  # we need a screen
@@ -170,12 +179,12 @@ while True:
     if ball.ycor() > 250:
         ball.sety(250)
         ball.dy *= -1
-        os.system("afplay bounce.wav&")
+        os.system(use+" bounce.wav&")
 
     if ball.ycor() < -250:
         ball.sety(-250)
         ball.dy *= -1
-        os.system("afplay bounce.wav&")
+        os.system(use+" bounce.wav&")
 
     if ball.xcor() > 350:
         ball.goto(0, 0)
@@ -192,10 +201,10 @@ while True:
         if ball.ycor() < paddle_b.ycor() + 50 and ball.ycor() > paddle_b.ycor() - 50:
             ball.setx(335)
             ball.dx *= -1.1  # increase speed each time we hit the ball
-            os.system("afplay bounce.wav&")
+            os.system(use+" bounce.wav&")
 
     if (ball.xcor() < -340 and ball.xcor() > -350):
         if ball.ycor() < paddle_a.ycor() + 50 and ball.ycor() > paddle_a.ycor() - 50:
             ball.setx(-335)
             ball.dx *= -1.1  # increase speed each time we hit the ball
-            os.system("afplay bounce.wav&")
+            os.system(use+" bounce.wav&")
