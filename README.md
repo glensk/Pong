@@ -11,21 +11,25 @@ Pong in python for singleplayer or muyltiplayer.
 ```shell
 git clone https://github.com/glensk/Pong
 cd Pong
+```
+
+Now, we need to install the ``tkinter`` library for your specific version of
+python. To find your version of python, type:
+
+```shell
 python3 --version
+```
+
+For example, my Python version is 3.10, so I would install as
+
+```shell
+# 🚨 Make sure to specify the correct Python version.
 
 # 👇️ === UBUNTU / DEBIAN ===
-sudo apt-get install python3-tk
-
-# 🚨 Make sure to specify the correct Python version.
-# For example, my Python v is 3.10, so I would install as
 sudo apt-get install python3.10-tk
 
 # 👇️ === MacOS ===
 brew install python-tk@3.10
-
-# 🚨 Make sure to specify the correct Python version.
-# For example, if you run Python v3.9 run adjust command to
-brew install python-tk@3.9
 
 # 👇️ === Fedora ===
 sudo dnf install python3-tkinter
@@ -35,7 +39,6 @@ sudo yum install python3-tkinter
 
 # 👇️ === Arch Linux (Manjaro, Antegros) ===
 sudo pacman -S tk
-
 ```
 
 ## Run
