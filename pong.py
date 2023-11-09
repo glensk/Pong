@@ -27,8 +27,9 @@ answers = {"Singleplayer": 1, "Multiplayer": 2}
 answer = wn.textinput(
     "pick a mode: ", "Type one of the following: ".join(answers))
 
+print("answer:",answer)
 version = ""
-if(answer == "Singleplayer"):
+if(answer in [ "Singleplayer", "singleplayer", "1"]):
     version = "singleplayer"
     print("Entering singleplayer... AI Bot getting ready for first round...")
 else:
