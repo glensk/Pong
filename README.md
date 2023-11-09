@@ -22,16 +22,16 @@ python. To find your version of python, type:
 python3 --version
 ```
 
-For example, my Python version is 3.10, so I would install as
+For example, my Python version is 3.11, so I would install as
 
 ```shell
 # 🚨 Make sure to specify the correct Python version.
 
 # 👇️ === UBUNTU / DEBIAN ===
-sudo apt-get install python3.10-tk
+sudo apt-get install python3.11-tk
 
 # 👇️ === MacOS ===
-brew install python-tk@3.10
+brew install python-tk@3.11
 
 # 👇️ === Fedora ===
 sudo dnf install python3-tkinter
