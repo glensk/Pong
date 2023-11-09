@@ -1,12 +1,18 @@
-# Pong
-Pong in python for singleplayer or muyltiplayer. 
+# Pong and Sneak in python
+Two classic games in python: Pong and Sneak. 
+
+# Notes on Pong
+Pong in python is for singleplayer or muyltiplayer. 
 - Upon start, type singleplayer or multiplayer.
 - Uses keys "w" and "s" for left player. 
 - Use keys "up-arrow" and "down-arrow" for right player.
 
-
+# Notes on Snake
+To play snake, run ``pip3 install pygame`` once installed, run ``python3 snake``.
 
 ## Clone this repository
+
+To play, clone this repository using these commands:
 
 ```shell
 git clone https://github.com/glensk/Pong
