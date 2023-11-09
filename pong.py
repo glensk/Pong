@@ -189,10 +189,10 @@ while True:
         if ball.ycor() < paddle_b.ycor() + 50 and ball.ycor() > paddle_b.ycor() - 50:
             ball.setx(335)
             ball.dx *= -1.1  # increase speed each time we hit the ball
-            os.system("aplay bounce.wav&")
+            os.system("afplay bounce.wav&")
 
     if (ball.xcor() < -340 and ball.xcor() > -350):
         if ball.ycor() < paddle_a.ycor() + 50 and ball.ycor() > paddle_a.ycor() - 50:
             ball.setx(-335)
             ball.dx *= -1.1  # increase speed each time we hit the ball
-            os.system("aplay bounce.wav&")
+            os.system("afplay bounce.wav&")
