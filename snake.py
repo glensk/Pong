@@ -113,9 +113,10 @@ def game_loop():
         pygame.draw.rect(dis, white, [0, 0, 100, 40])
         score_font = pygame.font.SysFont("comicsansms", 35)
         value = score_font.render("Your Score: " + str(score), True, black)
+        # print('score:',score)
         dis.blit(value, [0, 0])
 
-        clock.tick(snake_speed)
+        clock.tick(snake_speed+score)
 
     pygame.quit()
     quit()
