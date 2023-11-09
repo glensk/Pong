@@ -36,7 +36,7 @@ elif (answer in [ "Multiplayer", "multiplayer", "2"]):
     version = "multiplayer"
     print("Entering multiplayer")
 else:
-    print("Please type \"singleplayer\" or \"1\" or \"multiplayer\" or \"2\"". Starting multiplayer version for now.)
+    print("Please type \"singleplayer\" or \"1\" or \"multiplayer\" or \"2\". Starting multiplayer version for now.")
     version = "multiplayer"
     print("Entering multiplayer")
 
@@ -167,12 +167,12 @@ while True:
     if ball.ycor() > 250:
         ball.sety(250)
         ball.dy *= -1
-        os.system("aplay bounce.wav&")
+        os.system("afplay bounce.wav&")
 
     if ball.ycor() < -250:
         ball.sety(-250)
         ball.dy *= -1
-        os.system("aplay bounce.wav&")
+        os.system("afplay bounce.wav&")
 
     if ball.xcor() > 350:
         ball.goto(0, 0)
